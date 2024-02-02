@@ -1,0 +1,335 @@
+:root {
+    --nav-bg: rgb(0, 7, 8);
+    --nav-color: #5c9898e6;
+    --h1-color: #11f0f0e6;
+    /* --bg-color: rgb(211, 202, 202); */
+    --bg-color: rgba(227, 221, 221, 0.329);
+}
+
+* {
+    /* border: 1px solid rgb(11, 11, 11); */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+#navbar {
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--nav-bg);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+#projects a,
+nav a {
+    color: var(--nav-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#projects a {
+    color: rgba(1, 20, 20, 0.639);
+    font-size: 1.3rem;
+    padding: auto;
+}
+
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+}
+
+h1 {
+    position: absolute;
+    margin-top: 30vh;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--h1-color);
+}
+
+
+.typewriter {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 34vh;
+    margin-left: 34vh;
+    font-size: 2rem;
+    font-family: "Pacifico", cursive;
+    color: white;
+    border-right: .15em solid rgb(0, 0, 0);
+    white-space: nowrap;
+    letter-spacing: .16em;
+    animation:
+        typing 5.5s steps(30, end),
+        blink-caret 1s step-end infinite;
+}
+
+.gradient-background {
+    background: linear-gradient(-300deg, #d00dea, #af06e7f4, #5c9898e6);
+    background-size: 100% 100%;
+    animation: gradient-animation 8s ease infinite;
+}
+
+.gradient-body-background {
+    background: linear-gradient(-300deg, #0be0e0e6, #09bdebe6, #7f4e86);
+    background-size: 100% 100%;
+    animation: gradient-animation 8s ease infinite;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    width: 90%;
+}
+
+/* {
+    position: relative;
+    width: calc(100%/5);
+    float: left;
+    text-align: left;
+} */
+
+.my-projects div h3,
+.course-projects div h3 {
+    width: 80%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.my-projects div h3:hover,
+.course-projects div h3:hover {
+
+    color: black;
+    background-color: rgba(0, 0, 0, 0.247);
+
+}
+
+
+
+.my-projects div,
+.course-projects div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/4);
+    float: left;
+    text-align: left;
+}
+
+
+.project-tile img {
+    position: static;
+    width: 270px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 15px solid rgba(196, 33, 196, 0.683);
+    margin-bottom: 10px;
+    border-radius: 10%;
+    /* background-color: yellow; */
+
+}
+
+.project-tile img:hover {
+    border: 15px solid rgba(14, 1, 14, 0.961);
+}
+
+.project-tile {
+    margin: 30px 20px;
+}
+
+hr {
+    position: relative;
+    margin: 30px;
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 3.5rem;
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: rgb(176, 12, 151);
+
+}
+
+li h3 {
+    width: 100%;
+    font-size: 2.5rem;
+    padding: auto;
+    text-align: center;
+    color: white;
+
+}
+
+svg {
+    height: 100px;
+    width: 100px;
+}
+
+.to_profile {
+    color: rgb(176, 12, 151);
+    text-align: center;
+}
+
+#profiles,
+#contact_me {
+    position: relative;
+    margin-left: 10%;
+    width: 80%;
+    height: 30vh;
+}
+
+/* #contact_me h3 {
+    background-color: rgb(22, 206, 50);
+    border-radius: 10px;
+    margin-left: 10px;
+
+} */
+
+#contact_me h3:hover {
+    color: rgb(22, 206, 50);
+    background-color: black;
+}
+
+#contact_me li {
+    width: 45%;
+    margin: 0 30px;
+
+}
+
+#profiles ul {
+    display: flex;
+}
+
+#profiles li {
+    flex-direction: row;
+    width: 50%;
+    margin: 0 30px;
+}
+
+#contact_me h3,
+#profiles h3 {
+    background-color: rgb(56, 59, 57);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#profiles h3:hover {
+    background-color: black;
+}
+
+#contact_me a,
+#profiles a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+}
+
+h4 {
+    display: flex;
+    color: wheat;
+    align-items: center;
+    font-family: "Mountains of Christmas", serif;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+
+        border-color: transparent;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .my-projects div,
+    .course-projects div {
+        width: calc(100%/3);
+    }
+
+    .project-tile img {
+        width: 210px;
+        height: 140px;
+        border: 10px solid rgba(196, 33, 196, 0.683);
+
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav a,
+    h3 {
+        font-size: 1.1rem;
+    }
+
+
+    li h3 {
+        font-size: 1.5rem;
+    }
+
+    .my-projects div h3,
+    .course-projects div h3 {
+        width: 100%;
+    }
+}
