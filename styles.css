@@ -1,280 +1,114 @@
-:root {
-    --nav-bg: rgb(0, 7, 8);
-    --nav-color: #5c9898e6;
-    --h1-color: #11f0f0e6;
-    /* --bg-color: rgb(211, 202, 202); */
-    --bg-color: rgba(227, 221, 221, 0.329);
-}
-
 * {
-    /* border: 1px solid rgb(11, 11, 11); */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --fixed_item-bg: #6C22A6;
+    --font-nav-link-color: #FFFBF5;
+    --font-welcome-h1-color: #96E9C6;
+    --font-welcome-p-color: white;
+    --body-bg: #0ddbea46;
+
+    --font-welcome-h1-size: 3rem;
+    --font-welcome-h2-size: 2rem;
+    --font-nav-link-size: 1.5rem;
+}
+
 body {
     position: absolute;
-    height: 100vh;
     width: 100%;
-    background-color: var(--bg-color);
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--body-bg);
+    /* background: linear-gradient(200deg, #0d53ea, #0691e7f4, #5c9896e6);
+    background-size: 100% 100%;
+    animation: gradient-animation 8s ease infinite; */
 }
 
-#navbar {
+/* setting a bar for navbar and footer */
+.bar {
+    height: 10%;
+    background-color: var(--fixed_item-bg);
+}
+
+/* navbar start */
+nav {
+    /* fixing the navbar to the top */
     position: fixed;
-    flex-direction: column;
-    background-color: var(--nav-bg);
-    height: 60px;
-    width: 100%;
+    /* Setting nav_links end of the navbar at center */
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    z-index: 1;
-}
-
-nav ul {
-    display: flex;
-    gap: 30px;
-}
-
-#projects a,
-nav a {
-    color: var(--nav-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-}
-
-#projects a {
-    color: rgba(1, 20, 20, 0.639);
-    font-size: 1.3rem;
-    padding: auto;
-}
-
-
-#welcome-section {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     width: 100%;
-    margin-top: 60px;
-    align-items: center;
+
 }
 
-h1 {
-    position: absolute;
-    margin-top: 30vh;
-    text-align: center;
-    font-size: 4rem;
-    color: var(--h1-color);
+.navbar_list {
+    display: flex;
+
 }
 
+.check {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 
-.typewriter {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 34vh;
-    margin-left: 34vh;
-    font-size: 2rem;
-    font-family: "Pacifico", cursive;
-    color: white;
-    border-right: .15em solid rgb(0, 0, 0);
-    white-space: nowrap;
-    letter-spacing: .16em;
-    animation:
-        typing 5.5s steps(30, end),
-        blink-caret 1s step-end infinite;
 }
 
+.nav_link a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: var(--font-nav-link-color);
+    font-size: var(--font-nav-link-size);
+    text-decoration: none;
+    padding: 15px;
+
+}
+
+/* navbar over */
+
+/* welcome section start */
 .gradient-background {
     background: linear-gradient(-300deg, #d00dea, #af06e7f4, #5c9898e6);
     background-size: 100% 100%;
     animation: gradient-animation 8s ease infinite;
 }
 
-.gradient-body-background {
-    background: linear-gradient(-300deg, #0be0e0e6, #09bdebe6, #7f4e86);
-    background-size: 100% 100%;
-    animation: gradient-animation 8s ease infinite;
-}
-
-#projects {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    width: 90%;
-}
-
-/* {
+.welcome_section_container {
     position: relative;
-    width: calc(100%/5);
-    float: left;
-    text-align: left;
-} */
-
-.my-projects div h3,
-.course-projects div h3 {
-    width: 80%;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-
-.my-projects div h3:hover,
-.course-projects div h3:hover {
-
-    color: black;
-    background-color: rgba(0, 0, 0, 0.247);
-
-}
-
-
-
-.my-projects div,
-.course-projects div {
-    display: flex;
-    flex-direction: column;
-    width: calc(100%/4);
-    float: left;
-    text-align: left;
-}
-
-
-.project-tile img {
-    position: static;
-    width: 270px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    border: 15px solid rgba(196, 33, 196, 0.683);
-    margin-bottom: 10px;
-    border-radius: 10%;
-    /* background-color: yellow; */
-
-}
-
-.project-tile img:hover {
-    border: 15px solid rgba(14, 1, 14, 0.961);
-}
-
-.project-tile {
-    margin: 30px 20px;
-}
-
-hr {
-    position: relative;
-    margin: 30px;
-}
-
-h2 {
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    font-size: 3.5rem;
-    font-family: "Ubuntu", sans-serif;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: rgb(176, 12, 151);
-
-}
-
-li h3 {
-    width: 100%;
-    font-size: 2.5rem;
-    padding: auto;
-    text-align: center;
-    color: white;
-
-}
-
-svg {
-    height: 100px;
-    width: 100px;
-}
-
-.to_profile {
-    color: rgb(176, 12, 151);
-    text-align: center;
-}
-
-#profiles,
-#contact_me {
-    position: relative;
-    margin-left: 10%;
-    width: 80%;
-    height: 30vh;
-}
-
-/* #contact_me h3 {
-    background-color: rgb(22, 206, 50);
-    border-radius: 10px;
-    margin-left: 10px;
-
-} */
-
-#contact_me h3:hover {
-    color: rgb(22, 206, 50);
-    background-color: black;
-}
-
-#contact_me li {
-    width: 45%;
-    margin: 0 30px;
-
-}
-
-#profiles ul {
+    height: 100vh;
+    z-index: -1;
     display: flex;
-}
-
-#profiles li {
-    flex-direction: row;
-    width: 50%;
-    margin: 0 30px;
-}
-
-#contact_me h3,
-#profiles h3 {
-    background-color: rgb(56, 59, 57);
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
-#profiles h3:hover {
-    background-color: black;
-}
-
-#contact_me a,
-#profiles a {
-    display: flex;
-    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    left: 10px;
+    overflow: hidden;
 }
 
-h4 {
-    display: flex;
-    color: wheat;
-    align-items: center;
-    font-family: "Mountains of Christmas", serif;
+.welcome_note {
+    font-size: 3rem;
+    font-family: "Pacifico", cursive;
+    color: var(--font-welcome-h1-color);
+
 }
 
-footer {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    height: 100px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+p {
+    margin: 0 0 0 100px;
+    color: var(--font-welcome-p-color);
 }
 
 /* The typing effect */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(28, end);
+}
+
 @keyframes typing {
     from {
         width: 0%
@@ -300,36 +134,233 @@ footer {
 
 }
 
-@media (max-width:768px) {
+/* The typing effect over and  welcome section over */
 
-    .my-projects div,
-    .course-projects div {
-        width: calc(100%/3);
+/* projects section Start */
+h2 {
+    display: block;
+    padding: 30px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: var(--font-welcome-h2-size);
+}
+
+h3 {
+    border: 1px solid black;
+    margin: 0 40px 20px 40px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: var(--font-nav-link-color);
+    font-size: var(--font-nav-link-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+.project_tile {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+}
+
+div img {
+    flex-wrap: wrap;
+    margin: 20px 20px 10px 20px;
+    width: 380px;
+    height: 300px;
+    border-radius: 20px;
+
+}
+
+.projects_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    /* background-color: #96E9C6; */
+    background: linear-gradient(-200deg, #a00dea, #0691e7f4, #8a5c98e6);
+    background-size: 100% 100%;
+    animation: gradient-animation 8s ease infinite;
+    border-radius: 20px;
+}
+
+/* projects section over*/
+
+/* Profile Section & Contact Me section Start*/
+.profiles_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* background-color: #6C22A6; */
+}
+
+.profile_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile_tile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100%/3);
+}
+
+.profile_tile a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: #6C22A6;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.profile_tile a h3 {
+    display: flex;
+    width: 80%;
+    margin: 15px;
+    border: none;
+
+}
+
+li img {
+    flex-wrap: wrap;
+    width: 80px;
+    height: 80px;
+}
+
+/* Profile Section & Contact Me section Over*/
+/* footer section */
+h4 {
+    color: white;
+    align-items: center;
+    font-family: "Mountains of Christmas", serif;
+}
+
+footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* footer section */
+h3:hover,
+nav a:hover {
+    color: var(--font-welcome-h1-color);
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+img:hover {
+    transform: scale(1.05);
+    z-index: -1;
+}
+
+
+/* Media */
+@media screen and (max-width:950px) {
+    /* footer {
+        width: 110%;
     }
 
-    .project-tile img {
-        width: 210px;
-        height: 140px;
-        border: 10px solid rgba(196, 33, 196, 0.683);
+    .welcome_section_container {
+        width: 100%;
+    } */
 
+    .projects {
+        justify-content: center;
     }
+}
 
+@media (min-width:300px) and (max-width:700px) {
     h2 {
-        font-size: 2rem;
+        padding: 5px;
+        font-size: 1.3rem;
+        color: #6C22A6;
+        margin-left: 20px;
+        width: 100%;
     }
 
-    nav a,
-    h3 {
-        font-size: 1.1rem;
+    .nav_link a {
+        font-size: 1rem;
     }
 
-
-    li h3 {
+    .welcome_note {
         font-size: 1.5rem;
     }
 
-    .my-projects div h3,
-    .course-projects div h3 {
-        width: 100%;
+    .welcome_section_container {
+        width: 131%;
     }
+
+    h3 {
+        margin: 8px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .projects {
+        margin-left: 100px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    div img {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 10px 5px 10px;
+        width: 170px;
+        height: 150px;
+        border-radius: 20px;
+    }
+
+    .profiles_container {
+        margin-left: 20px;
+        width: 120%;
+    }
+
+    .profile_tile {
+        width: 50%;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    li img {
+        flex-wrap: wrap;
+        width: 60px;
+        height: 60px;
+        border-radius: 10%;
+    }
+
+    .profile_tile a {}
+
+    .profile_tile a h3 {
+        margin: 15px 5px;
+
+    }
+
+    footer {
+        width: 131%;
+    }
+
+
 }
