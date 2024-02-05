@@ -226,7 +226,8 @@ div img {
     flex-wrap: nowrap;
     width: 100%;
     background-color: #6C22A6;
-    margin-right: 50px;
+    margin-right: 10px;
+    margin-left: 50px;
     border-radius: 20px;
 }
 
@@ -270,7 +271,6 @@ nav a:hover {
 
 img:hover {
     transform: scale(1.05);
-    z-index: -1;
 }
 
 
